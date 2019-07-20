@@ -13,7 +13,7 @@ class SupportedComponent extends Component {
                 <form>
                     <h1>Do you feel supported by Prime staff today?</h1>
 
-                    <p>Feeling?</p>
+                    <h3>Please choose an option below that best describes how you feel.</h3>
                     <select>
                         <option value="1">1: I feel abandoned.</option>
                         <option value="2">2: I don't feel supported.</option>

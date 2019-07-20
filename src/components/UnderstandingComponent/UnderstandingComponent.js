@@ -13,7 +13,7 @@ class UnderstandingComponent extends Component {
                 <form>
                     <h1>How well are you understanding the content?</h1>
 
-                    <p>Understanding?</p>
+                    <h3>Please choose an option below that best describes how you feel.</h3>
                     <select>
                         <option value="1">1: I'm totally lost.</option>
                         <option value="2">2: I don't have this.</option>

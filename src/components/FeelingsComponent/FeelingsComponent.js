@@ -13,7 +13,7 @@ render() {
         <form>
         <h1>How are you feeing today?</h1>
 
-        <p>Feeling?</p>
+        <h3>Please choose an option below that best describes how you feel.</h3>
         <select>
             <option value="1">1: I'm feeling very stressed.</option>
             <option value="2">2: I'm feeling stressed.</option>
