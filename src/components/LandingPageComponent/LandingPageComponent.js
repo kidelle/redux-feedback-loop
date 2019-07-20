@@ -5,6 +5,9 @@ import Axios from 'axios';
 
 class LandingPageComponent extends Component {
 
+    nextPage = () => 
+    {this.props.history.push('/Feelings')}
+
 
     render() {
         return (
@@ -16,7 +19,7 @@ class LandingPageComponent extends Component {
 
                     <h3>Click NEXT to get started!</h3>
 
-                    <button type="submit">Start Feedback</button>
+                    <button onClick={(event) => this.nextPage()}type="submit">Start Feedback</button>
                 </div>
             </>
         )
