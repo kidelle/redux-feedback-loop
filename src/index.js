@@ -9,10 +9,8 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 
-const feedback = ({Feelings: 0, Understanding: 0, Support: 0, Comments: 'blah'});
 
-const response = [];
-
+// Reducers
 const feelingsReducer = (state = [], action) => {
     if(action.type === 'SET_FEELINGS') {
         return action.payload;
@@ -20,42 +18,42 @@ const feelingsReducer = (state = [], action) => {
     return state;
 }
 
-const understandingReducer = (state = response, action) => {
+const understandingReducer = (state = [], action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
     }
     return state;
 }
 
-const supportedReducer = (state = response, action) => {
+const supportedReducer = (state = [], action) => {
     if (action.type === 'SET_SUPPORTED') {
         return action.payload;
     }
     return state;
 }
 
-const commentsReducer = (state = response, action) => {
+const commentsReducer = (state = [], action) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
     }
     return state;
 }
 
-const reviewReducer = (state = response, action) => {
+const reviewReducer = (state = [], action) => {
     if (action.type === 'SET_REVIEW') {
         return action.payload;
     }
     return state;
 }
 
-const successReducer = (state = response, action) => {
+const successReducer = (state = [], action) => {
     if (action.type === 'SET_SUCCESS') {
         return action.payload;
     }
     return state;
 }
 
-const landingReducer = (state = response, action) => {
+const landingReducer = (state = [], action) => {
     if (action.type === 'SET_LANDING') {
         return action.payload;
     }

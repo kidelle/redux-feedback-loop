@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
-import { log } from 'util';
+
 
 class FeelingsComponent extends Component{
 

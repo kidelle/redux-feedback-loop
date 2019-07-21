@@ -14,7 +14,7 @@ class ReviewComponent extends Component {
               
              
                 <h2>Feelings: {this.props.reduxStore.feelingsReducer}</h2>
-                <h2>Understanding: {this.props.reduxStore.undertandingReducer}</h2>
+                <h2>Understanding: {this.props.reduxStore.understandingReducer}</h2>
                 <h2>Supported: {this.props.reduxStore.supportedReducer}</h2>
                 <h2>Comments: {this.props.reduxStore.commentsReducer}</h2>
                 <button onClick={(event) => this.nextPage()} type="submit">SUMBIT</button>
