@@ -5,16 +5,32 @@ import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 class FeelingsComponent extends Component{
 
-    nextPage = () => { this.props.history.push('/Understanding') }
+    state = {
+        feelings: 0
+    }
+       
+
+    handleChange = (event) => {
+        this.setState ({feelings: event.target.value});
+    
+    }
+
+    nextPage = () => { this.props.history.push('/Understanding') 
+    this.props.dispatch({type: 'SET_FEELINGS', payload: this.state.feelings.value});
+
+       
+}
+ 
 
 render() {
     return (
         <>
         <form>
-        <h1>How are you feeing today?</h1>
+        <h1>How are you feeling today?</h1>
 
         <h3>Please choose an option below that best describes how you feel.</h3>
-        <select>
+        <select onChange={(event) => this.handleChange(event)}>
+            
             <option value="1">1: I'm feeling very stressed.</option>
             <option value="2">2: I'm feeling stressed.</option>
             <option value="3">3: I'm feeling OK.</option>
@@ -30,7 +46,7 @@ render() {
 }
 
 
-}
+} 
 
 const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore

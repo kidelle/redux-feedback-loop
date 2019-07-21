@@ -11,12 +11,9 @@ class ReviewComponent extends Component {
         return (
             <>
             <h2>Review Your Feedback</h2>
-          {this.props.reduxStore.reviewReducer.map((item, i) => {
+                {this.props.reduxStore.feelingsReducer.map((item, i) => {
             return( <ul key ={i}>
                 <li>Feelings: {item.feelings}</li>
-                <li>Understanding: {item.understanding}</li>
-                <li>Support: {item.supported}</li>
-                <li>Comments: {item.comments}</li>
                 <button onClick={(event) => this.nextPage()} type="submit">SUMBIT</button>
             </ul>)
           })}
@@ -26,7 +23,6 @@ class ReviewComponent extends Component {
       
 
 }
-
 const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore
 })
