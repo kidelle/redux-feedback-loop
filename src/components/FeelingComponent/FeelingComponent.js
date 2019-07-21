@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 
-class FeelingsComponent extends Component{
+class FeelingComponent extends Component{
 
+    // set state
     state = {
         feelings: 0
     }
@@ -17,10 +17,10 @@ class FeelingsComponent extends Component{
         });
         
     }
-
+    // this will grab input and route to the next page
     nextPage = () => { 
 
-    this.props.dispatch({type: 'SET_FEELINGS', payload: this.state.feelings});
+    this.props.dispatch({type: 'SET_FEELING', payload: this.state.feelings});
      this.props.history.push('/Understanding') 
 
        
@@ -48,7 +48,7 @@ render() {
             <option value="5">5: I'm feeling great.</option>
         </select>
 
-                <button onClick={(event) => this.nextPage()} type="submit">NEXT</button>
+                <button onClick={(event) => this.nextPage()} type="button">NEXT</button>
             </form>
             <ReviewComponent />
         </>
@@ -62,4 +62,4 @@ const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore
 })
 
-export default connect(mapReduxStoreToProps)(FeelingsComponent);
+export default connect(mapReduxStoreToProps)(FeelingComponent);

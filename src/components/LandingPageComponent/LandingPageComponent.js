@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 
 class LandingPageComponent extends Component {
 
+    // this will route you to the next page
     nextPage = () => 
-    {this.props.history.push('/Feelings')}
+    {this.props.history.push('/Feeling')}
 
 
     render() {
@@ -19,7 +20,7 @@ class LandingPageComponent extends Component {
 
                     <h3>Click NEXT to get started!</h3>
 
-                    <button onClick={(event) => this.nextPage()}type="submit">Start Feedback</button>
+                    <button onClick={(event) => this.nextPage()}type="button">Start Feedback</button>
                 </div>
             </>
         )

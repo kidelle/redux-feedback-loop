@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
 
 
 class SuccessComponent extends Component {
 
+    // this will route you back to landing page
     nextPage = () => { this.props.history.push('/') }
 
     render() {

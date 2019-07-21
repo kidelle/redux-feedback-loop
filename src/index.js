@@ -11,8 +11,8 @@ import {Provider} from 'react-redux';
 
 
 // Reducers
-const feelingsReducer = (state = [], action) => {
-    if(action.type === 'SET_FEELINGS') {
+const feelingReducer = (state = [], action) => {
+    if(action.type === 'SET_FEELING') {
         return action.payload;
     }
     return state;
@@ -62,7 +62,7 @@ const landingReducer = (state = [], action) => {
 
 const reduxStore = createStore(
     combineReducers({
-        feelingsReducer,
+        feelingReducer,
         understandingReducer,
         supportedReducer,
         commentsReducer,

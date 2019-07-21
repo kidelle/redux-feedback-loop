@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 class UnderstandingComponent extends Component {
 
+    // set state
     state = {
         understanding: 0
     }
@@ -14,7 +14,7 @@ class UnderstandingComponent extends Component {
             understanding: event.target.value
         });
     }
-
+    // this will grab input and route to the next page
     nextPage = () => { 
         this.props.dispatch({type: 'SET_UNDERSTANDING', payload: this.state.understanding});
         this.props.history.push('/Supported')
@@ -38,7 +38,7 @@ class UnderstandingComponent extends Component {
                         <option value="5">5: I've got this!.</option>
                     </select>
 
-                    <button onClick={(event) => this.nextPage()} type="submit">NEXT</button>
+                    <button onClick={(event) => this.nextPage()} type="button">NEXT</button>
                 </form>
                 <ReviewComponent />
             </>

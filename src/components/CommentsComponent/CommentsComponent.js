@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 class CommentsComponent extends Component {
 
+    // set state
     state = {
         comments: ''
     }
@@ -14,7 +14,7 @@ class CommentsComponent extends Component {
             comments: event.target.value
         });
     }
-
+    // this will grab input and route to the next page
     nextPage = () => { 
         
         this.props.dispatch({type: 'SET_COMMENTS', payload: this.state.comments});
@@ -34,7 +34,7 @@ class CommentsComponent extends Component {
                    <input value={this.state.comments} onChange={(event) => this.handleChange(event)} 
                         placeholder="Leave any comments here."></input>
 
-                    <button onClick={(event) => this.nextPage()} type="submit">NEXT</button>
+                    <button onClick={(event) => this.nextPage()} type="button">NEXT</button>
                 </form>
                 <ReviewComponent />
             </>

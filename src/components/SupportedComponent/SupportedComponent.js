@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
 class SupportedComponent extends Component {
 
+    // set state
     state = {
         supported: 0
     }
@@ -14,7 +14,7 @@ class SupportedComponent extends Component {
             supported: event.target.value
         })
     }
-
+    // this will grab input and route to the next page
     nextPage = () => { 
         this.props.dispatch({type: 'SET_SUPPORTED', payload: this.state.supported});
         this.props.history.push('/Comments')
@@ -39,7 +39,7 @@ class SupportedComponent extends Component {
                         <option value="5">5: I feel supported!.</option>
                     </select>
 
-                    <button onClick={(event) => this.nextPage()} type="submit">NEXT</button>
+                    <button onClick={(event) => this.nextPage()} type="button">NEXT</button>
                 </form>
                 <ReviewComponent />
             </>
