@@ -9,7 +9,7 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 
-const feedback = ({Feelings: 0, Understanding: 0, Support: 0, Comments: 'blah'});
+//const feedback = ({Feelings: 0, Understanding: 0, Support: 0, Comments: 'blah'});
 
 const response = [];
 
