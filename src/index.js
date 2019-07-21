@@ -15,49 +15,49 @@ const response = [];
 
 const feelingsReducer = (state = response, action) => {
     if(action.type === 'SET_FEELINGS') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const understandingReducer = (state = response, action) => {
     if (action.type === 'SET_UNDERSTANDING') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const supportedReducer = (state = response, action) => {
     if (action.type === 'SET_SUPPORTED') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const commentsReducer = (state = response, action) => {
     if (action.type === 'SET_COMMENTS') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const reviewReducer = (state = response, action) => {
     if (action.type === 'SET_REVIEW') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const successReducer = (state = response, action) => {
     if (action.type === 'SET_SUCCESS') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
 
 const landingReducer = (state = response, action) => {
     if (action.type === 'SET_LANDING') {
-        return [...action.payload];
+        return action.payload;
     }
     return state;
 }
