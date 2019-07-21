@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Axios from 'axios';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
+import { log } from 'util';
 
 class FeelingsComponent extends Component{
 
@@ -11,25 +12,34 @@ class FeelingsComponent extends Component{
        
 
     handleChange = (event) => {
-        this.setState ({feelings: event.target.value});
-    
+        this.setState ({
+            feelings: event.target.value
+        });
+        
     }
 
-    nextPage = () => { this.props.history.push('/Understanding') 
-    this.props.dispatch({type: 'SET_FEELINGS', payload: this.state});
+    nextPage = () => { 
+
+    this.props.dispatch({type: 'SET_FEELINGS', payload: this.state.feelings});
+     this.props.history.push('/Understanding') 
 
        
 }
  
 
 render() {
+
+    console.log(this.state);
+
     return (
+
+        
         <>
         <form>
         <h1>How are you feeling today?</h1>
 
         <h3>Please choose an option below that best describes how you feel.</h3>
-        <select onChange={(event) => this.handleChange(event)}>
+        <select value={this.state.feelings} onChange={(event) => this.handleChange(event)}>
             
             <option value="1">1: I'm feeling very stressed.</option>
             <option value="2">2: I'm feeling stressed.</option>

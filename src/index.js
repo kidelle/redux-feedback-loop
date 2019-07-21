@@ -9,11 +9,11 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import logger from 'redux-logger';
 import {Provider} from 'react-redux';
 
-//const feedback = ({Feelings: 0, Understanding: 0, Support: 0, Comments: 'blah'});
+const feedback = ({Feelings: 0, Understanding: 0, Support: 0, Comments: 'blah'});
 
 const response = [];
 
-const feelingsReducer = (state = response, action) => {
+const feelingsReducer = (state = [], action) => {
     if(action.type === 'SET_FEELINGS') {
         return action.payload;
     }

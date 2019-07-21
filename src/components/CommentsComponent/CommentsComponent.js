@@ -23,7 +23,6 @@ class CommentsComponent extends Component {
         )
     }
 
-
 }
 
 const mapReduxStoreToProps = (reduxStore) => ({
