@@ -5,13 +5,19 @@ import Axios from 'axios';
 
 class ReviewComponent extends Component {
 
-    // set state to clear review
-    state = {};
+    // set state
+    state = {
+        feeling: this.props.reduxStore.feelingReducer,
+        understanding: this.props.reduxStore.understandingReducer,
+        support: this.props.reduxStore.supportReducer,
+        comments: this.props.reduxStore.commentsReducer
+
+    }
     
     nextPage = (event) => { 
 
-      
-        Axios.post('/feedback', this.props.state)
+      // Send a POST request to server to pass feedback info
+        Axios.post('/feedback', this.state)
         .then(response => {
             console.log(this.state);
             alert('Thank You For Your Feedback!')
