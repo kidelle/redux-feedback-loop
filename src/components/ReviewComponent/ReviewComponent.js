@@ -21,7 +21,7 @@ class ReviewComponent extends Component {
         .then(response => {
             console.log(this.state);
             alert('Thank You For Your Feedback!')
-            this.props.dispatch({type: 'CLEAR', payload: this.state});
+            this.props.dispatch({type: 'RESET'});
         }).catch(error => {
             alert('Could not submit your feedback. Try again later.', error)
         })
@@ -30,6 +30,8 @@ class ReviewComponent extends Component {
         this.props.history.push('/success')
     }
     render() {
+
+        
         return (
             <>
             <h1>Review Your Feedback:</h1>

@@ -14,6 +14,7 @@ import {Provider} from 'react-redux';
 const feelingReducer = (state = [], action) => {
     if(action.type === 'SET_FEELING') {
         return action.payload;
+    
     }
     return state;
 }
@@ -21,42 +22,43 @@ const feelingReducer = (state = [], action) => {
 const understandingReducer = (state = [], action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
-    }
+    } 
+    
     return state;
 }
 
 const supportReducer = (state = [], action) => {
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
-    }
+    }  
     return state;
 }
 
 const commentsReducer = (state = [], action) => {
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
-    }
+    } 
     return state;
 }
 
 const reviewReducer = (state = [], action) => {
     if (action.type === 'SET_REVIEW') {
         return action.payload;
-    }
+    } 
     return state;
 }
 
 const successReducer = (state = [], action) => {
     if (action.type === 'SET_SUCCESS') {
         return action.payload;
-    }
+    } 
     return state;
 }
 
 const landingReducer = (state = [], action) => {
     if (action.type === 'SET_LANDING') {
         return action.payload;
-    }
+    } 
     return state;
 }
 

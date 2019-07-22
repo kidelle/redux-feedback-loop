@@ -19,6 +19,7 @@ class CommentsComponent extends Component {
         
         this.props.dispatch({type: 'SET_COMMENTS', payload: this.state.comments});
         this.props.history.push('/review') }
+        
 
     render() {
 

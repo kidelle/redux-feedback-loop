@@ -5,7 +5,13 @@ import { connect } from 'react-redux';
 class SuccessComponent extends Component {
 
     // this will route you back to landing page
-    nextPage = () => { this.props.history.push('/') }
+    nextPage = () => { this.props.history.push('/')
+    this.props.dispatch({type: 'SET_FEELING', payload: ''});
+    this.props.dispatch({ type: 'SET_UNDERSTANDING', payload: '' });
+    this.props.dispatch({ type: 'SET_SUPPORT', payload: '' });
+    this.props.dispatch({ type: 'SET_COMMENTS', payload: '' });
+
+}
 
     render() {
         return (
