@@ -17,7 +17,7 @@ class UnderstandingComponent extends Component {
     // this will grab input and route to the next page
     nextPage = () => { 
         this.props.dispatch({type: 'SET_UNDERSTANDING', payload: this.state.understanding});
-        this.props.history.push('/Supported')
+        this.props.history.push('/support')
      }
 
     render() {

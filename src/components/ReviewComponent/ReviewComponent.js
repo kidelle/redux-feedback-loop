@@ -20,7 +20,7 @@ class ReviewComponent extends Component {
             alert('Could not submit your feedback. Try again later.', error)
         })
     // this will route you to success page page after you review
-        this.props.history.push('/Success')
+        this.props.history.push('/success')
     }
     render() {
         return (
@@ -30,7 +30,7 @@ class ReviewComponent extends Component {
              
                 <h2>Feeling: {this.props.reduxStore.feelingReducer}</h2>
                 <h2>Understanding: {this.props.reduxStore.understandingReducer}</h2>
-                <h2>Supported: {this.props.reduxStore.supportedReducer}</h2>
+                <h2>Support: {this.props.reduxStore.supportReducer}</h2>
                 <h2>Comments: {this.props.reduxStore.commentsReducer}</h2>
                 <button onClick={(event) => this.nextPage(event)} type="button">SUBMIT</button>
            

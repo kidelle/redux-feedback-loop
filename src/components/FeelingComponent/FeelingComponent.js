@@ -21,7 +21,7 @@ class FeelingComponent extends Component{
     nextPage = () => { 
 
     this.props.dispatch({type: 'SET_FEELING', payload: this.state.feelings});
-     this.props.history.push('/Understanding') 
+     this.props.history.push('/understanding') 
 
        
 }

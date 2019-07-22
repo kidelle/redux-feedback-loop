@@ -8,7 +8,7 @@ import Feeling from '../FeelingComponent/FeelingComponent';
 import Landing from '../LandingPageComponent/LandingPageComponent';
 import Review from '../ReviewComponent/ReviewComponent';
 import Success from '../SuccessComponent/SuccessComponent';
-import Supported from '../SupportedComponent/SupportedComponent';
+import Support from '../SupportComponent/SupportComponent';
 import Understanding from '../UnderstandingComponent/UnderstandingComponent';
 
 class App extends Component {
@@ -26,12 +26,12 @@ class App extends Component {
         </header>
        <Router>
          <Route path="/" exact component={Landing} />
-         <Route path="/Feeling" component={Feeling} />
-         <Route path="/Understanding" component={Understanding} />
-         <Route path="/Supported" component={Supported} />
-         <Route path="/Comments" component={Comments} />
-         <Route path="/Review" component={Review} />
-         <Route path="/Success" component={Success} />
+         <Route path="/feeling" component={Feeling} />
+         <Route path="/understanding" component={Understanding} />
+         <Route path="/support" component={Support} />
+         <Route path="/comments" component={Comments} />
+         <Route path="/review" component={Review} />
+         <Route path="/success" component={Success} />
        </Router>
       </div>
     );

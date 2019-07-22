@@ -25,8 +25,8 @@ const understandingReducer = (state = [], action) => {
     return state;
 }
 
-const supportedReducer = (state = [], action) => {
-    if (action.type === 'SET_SUPPORTED') {
+const supportReducer = (state = [], action) => {
+    if (action.type === 'SET_SUPPORT') {
         return action.payload;
     }
     return state;
@@ -64,7 +64,7 @@ const reduxStore = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
-        supportedReducer,
+        supportReducer,
         commentsReducer,
         reviewReducer,
         successReducer,

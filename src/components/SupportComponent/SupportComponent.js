@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewComponent from '../ReviewComponent/ReviewComponent';
 
-class SupportedComponent extends Component {
+class SupportComponent extends Component {
 
     // set state
     state = {
-        supported: 0
+        support: 0
     }
 
     handleChange = (event) => {
         this.setState ({
-            supported: event.target.value
+            support: event.target.value
         })
     }
     // this will grab input and route to the next page
     nextPage = () => { 
-        this.props.dispatch({type: 'SET_SUPPORTED', payload: this.state.supported});
-        this.props.history.push('/Comments')
+        this.props.dispatch({type: 'SET_SUPPORT', payload: this.state.support});
+        this.props.history.push('/comments')
     
     }
 
@@ -31,7 +31,7 @@ class SupportedComponent extends Component {
                     <h1>Do you feel supported by Prime staff today?</h1>
 
                     <h3>Please choose an option below that best describes how you feel.</h3>
-                    <select value={this.state.supported} onChange={(event) => this.handleChange(event)}>
+                    <select value={this.state.support} onChange={(event) => this.handleChange(event)}>
                         <option value="1">1: I feel abandoned.</option>
                         <option value="2">2: I don't feel supported.</option>
                         <option value="3">3: I feel slightly supported.</option>
@@ -53,4 +53,4 @@ const mapReduxStoreToProps = (reduxStore) => ({
     reduxStore
 })
 
-export default connect(mapReduxStoreToProps)(SupportedComponent);
+export default connect(mapReduxStoreToProps)(SupportComponent);

@@ -7,7 +7,7 @@ class LandingPageComponent extends Component {
 
     // this will route you to the next page
     nextPage = () => 
-    {this.props.history.push('/Feeling')}
+    {this.props.history.push('/feeling')}
 
 
     render() {
